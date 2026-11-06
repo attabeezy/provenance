@@ -1,0 +1,496 @@
+{
+ "W": {
+  "folk": {
+   "in_domain_auc": 0.8344437499999999,
+   "in_domain_fpr@95": 0.5775,
+   "in_domain_fpr@99": 0.7825,
+   "transfer_auc": 0.5595103219192001,
+   "tests": {
+    "gutenberg": {
+     "n": 11066,
+     "fpr@95": 0.3956262425447316,
+     "fpr@99": 0.5941622989336707
+    },
+    "hn_pre": {
+     "n": 6000,
+     "fpr@95": 0.7278333333333333,
+     "fpr@99": 0.8591666666666666
+    },
+    "arxiv_pre": {
+     "n": 3080,
+     "fpr@95": 0.563961038961039,
+     "fpr@99": 0.8185064935064935
+    },
+    "arxiv_post": {
+     "n": 1600,
+     "fpr@95": 0.48375,
+     "fpr@99": 0.8025
+    }
+   },
+   "weights": {
+    "std_sent_len": -2.017839629893411,
+    "mean_sent_len": -0.8450276532465243,
+    "mean_word_len": -0.24425482599932505,
+    "triad_per_1k": 0.22468420794988123,
+    "emdash_per_1k": -0.1706072396428751,
+    "ttr": -0.0877099806232827,
+    "notxbut_per_10k": -0.06723724897473458,
+    "core_per_1k": 0.0397520403620341,
+    "notonly_per_10k": -0.016859945122493905
+   },
+   "gutenberg_by_author": {
+    "D.H. Lawrence": {
+     "n": 266,
+     "fpr@95": 0.9887218045112782
+    },
+    "Oscar Wilde": {
+     "n": 131,
+     "fpr@95": 0.7862595419847328
+    },
+    "Jack London": {
+     "n": 173,
+     "fpr@95": 0.7687861271676301
+    },
+    "Arthur Conan Doyle": {
+     "n": 272,
+     "fpr@95": 0.7279411764705882
+    },
+    "Fyodor Dostoevsky": {
+     "n": 761,
+     "fpr@95": 0.6675427069645203
+    },
+    "James Joyce": {
+     "n": 553,
+     "fpr@95": 0.6130198915009042
+    },
+    "Joseph Conrad": {
+     "n": 213,
+     "fpr@95": 0.5539906103286385
+    },
+    "Virginia Woolf": {
+     "n": 227,
+     "fpr@95": 0.4889867841409692
+    },
+    "Henry James": {
+     "n": 264,
+     "fpr@95": 0.48863636363636365
+    },
+    "Thomas Hardy": {
+     "n": 240,
+     "fpr@95": 0.4708333333333333
+    },
+    "Louisa May Alcott": {
+     "n": 310,
+     "fpr@95": 0.4129032258064516
+    },
+    "Robert Louis Stevenson": {
+     "n": 114,
+     "fpr@95": 0.40350877192982454
+    },
+    "Emily Bronte": {
+     "n": 193,
+     "fpr@95": 0.38860103626943004
+    },
+    "Leo Tolstoy": {
+     "n": 1520,
+     "fpr@95": 0.3828947368421053
+    },
+    "Charles Dickens": {
+     "n": 2024,
+     "fpr@95": 0.375
+    },
+    "Charlotte Bronte": {
+     "n": 308,
+     "fpr@95": 0.288961038961039
+    },
+    "George Eliot": {
+     "n": 871,
+     "fpr@95": 0.2261768082663605
+    },
+    "Mark Twain": {
+     "n": 625,
+     "fpr@95": 0.2256
+    },
+    "Edith Wharton": {
+     "n": 215,
+     "fpr@95": 0.2186046511627907
+    },
+    "Jane Austen": {
+     "n": 804,
+     "fpr@95": 0.19776119402985073
+    },
+    "Mary Shelley": {
+     "n": 125,
+     "fpr@95": 0.16
+    },
+    "William Makepeace Thackeray": {
+     "n": 503,
+     "fpr@95": 0.147117296222664
+    },
+    "Herman Melville": {
+     "n": 354,
+     "fpr@95": 0.12994350282485875
+    }
+   }
+  },
+  "tfidf": {
+   "in_domain_auc": 0.9806722222222223,
+   "in_domain_fpr@95": 0.08666666666666667,
+   "in_domain_fpr@99": 0.3,
+   "transfer_auc": 0.8109463834702612,
+   "tests": {
+    "gutenberg": {
+     "n": 11066,
+     "fpr@95": 9.036688957166094e-05,
+     "fpr@99": 9.036688957166094e-05
+    },
+    "hn_pre": {
+     "n": 27739,
+     "fpr@95": 0.27131475539853633,
+     "fpr@99": 0.5708929665813476
+    },
+    "arxiv_pre": {
+     "n": 3080,
+     "fpr@95": 0.15681818181818183,
+     "fpr@99": 0.48668831168831167
+    },
+    "arxiv_post": {
+     "n": 1600,
+     "fpr@95": 0.06,
+     "fpr@99": 0.3675
+    }
+   },
+   "terms": {
+    "top_ai_terms": [
+     "born in",
+     "has",
+     "is",
+     "died",
+     "including",
+     "has been",
+     "was born",
+     "died in",
+     "also",
+     "was founded",
+     "been",
+     "important",
+     "served as",
+     "is also",
+     "the early",
+     "2006",
+     "served",
+     "founded in",
+     "began",
+     "1978",
+     "the age",
+     "they are",
+     "including the",
+     "in 2006",
+     "tells the"
+    ],
+    "top_human_terms": [
+     "this",
+     "of the",
+     "at",
+     "life",
+     "with",
+     "early life",
+     "history",
+     "biography",
+     "which",
+     "to the",
+     "as",
+     "name",
+     "later",
+     "under",
+     "had",
+     "for the",
+     "and in",
+     "although",
+     "along",
+     "in the",
+     "to",
+     "were",
+     "not",
+     "he was",
+     "former"
+    ]
+   }
+  },
+  "char": {
+   "in_domain_auc": 0.9763243055555556,
+   "in_domain_fpr@95": 0.13583333333333333,
+   "in_domain_fpr@99": 0.34833333333333333,
+   "transfer_auc": 0.7229423963415287,
+   "tests": {
+    "gutenberg": {
+     "n": 11066,
+     "fpr@95": 9.036688957166094e-05,
+     "fpr@99": 9.036688957166094e-05
+    },
+    "hn_pre": {
+     "n": 27739,
+     "fpr@95": 0.6465265510652871,
+     "fpr@99": 0.7875554273766178
+    },
+    "arxiv_pre": {
+     "n": 3080,
+     "fpr@95": 0.19155844155844157,
+     "fpr@99": 0.4409090909090909
+    },
+    "arxiv_post": {
+     "n": 1600,
+     "fpr@95": 0.04125,
+     "fpr@99": 0.145
+    }
+   }
+  }
+ },
+ "H": {
+  "folk": {
+   "in_domain_auc": 0.9208025645429045,
+   "in_domain_fpr@95": 0.28858024691358025,
+   "in_domain_fpr@99": 0.5756172839506173,
+   "transfer_auc": 0.61975625,
+   "tests": {
+    "gutenberg": {
+     "n": 11066,
+     "fpr@95": 0.25510572926079883,
+     "fpr@99": 0.4888848725826857
+    },
+    "hn_pre": {
+     "n": 6000,
+     "fpr@95": 0.0645,
+     "fpr@99": 0.2275
+    },
+    "arxiv_pre": {
+     "n": 3080,
+     "fpr@95": 0.4668831168831169,
+     "fpr@99": 0.8087662337662338
+    },
+    "arxiv_post": {
+     "n": 1600,
+     "fpr@95": 0.3975,
+     "fpr@99": 0.76875
+    }
+   },
+   "weights": {
+    "ttr": -2.0356186880117884,
+    "emdash_per_1k": -1.5297913716906495,
+    "std_sent_len": -1.1459001452593156,
+    "mean_sent_len": 0.6365850324034407,
+    "triad_per_1k": 0.5748666888266605,
+    "mean_word_len": 0.16158953844899782,
+    "notxbut_per_10k": -0.12155060071717133,
+    "notonly_per_10k": 0.008165160291347388,
+    "core_per_1k": 0.0011480998325304598
+   },
+   "gutenberg_by_author": {
+    "Jack London": {
+     "n": 173,
+     "fpr@95": 0.7745664739884393
+    },
+    "Louisa May Alcott": {
+     "n": 310,
+     "fpr@95": 0.5967741935483871
+    },
+    "Mary Shelley": {
+     "n": 125,
+     "fpr@95": 0.592
+    },
+    "Arthur Conan Doyle": {
+     "n": 272,
+     "fpr@95": 0.5845588235294118
+    },
+    "Fyodor Dostoevsky": {
+     "n": 761,
+     "fpr@95": 0.5413929040735874
+    },
+    "Oscar Wilde": {
+     "n": 131,
+     "fpr@95": 0.5038167938931297
+    },
+    "D.H. Lawrence": {
+     "n": 266,
+     "fpr@95": 0.40977443609022557
+    },
+    "Leo Tolstoy": {
+     "n": 1520,
+     "fpr@95": 0.40921052631578947
+    },
+    "James Joyce": {
+     "n": 553,
+     "fpr@95": 0.2965641952983725
+    },
+    "Jane Austen": {
+     "n": 804,
+     "fpr@95": 0.26741293532338306
+    },
+    "Charles Dickens": {
+     "n": 2024,
+     "fpr@95": 0.18527667984189725
+    },
+    "Robert Louis Stevenson": {
+     "n": 114,
+     "fpr@95": 0.16666666666666666
+    },
+    "Joseph Conrad": {
+     "n": 213,
+     "fpr@95": 0.14084507042253522
+    },
+    "Virginia Woolf": {
+     "n": 227,
+     "fpr@95": 0.1277533039647577
+    },
+    "Edith Wharton": {
+     "n": 215,
+     "fpr@95": 0.10232558139534884
+    },
+    "Henry James": {
+     "n": 264,
+     "fpr@95": 0.09090909090909091
+    },
+    "George Eliot": {
+     "n": 871,
+     "fpr@95": 0.07462686567164178
+    },
+    "William Makepeace Thackeray": {
+     "n": 503,
+     "fpr@95": 0.07157057654075547
+    },
+    "Thomas Hardy": {
+     "n": 240,
+     "fpr@95": 0.0625
+    },
+    "Mark Twain": {
+     "n": 625,
+     "fpr@95": 0.0544
+    },
+    "Herman Melville": {
+     "n": 354,
+     "fpr@95": 0.05367231638418079
+    },
+    "Emily Bronte": {
+     "n": 193,
+     "fpr@95": 0.05181347150259067
+    },
+    "Charlotte Bronte": {
+     "n": 308,
+     "fpr@95": 0.016233766233766232
+    }
+   }
+  },
+  "tfidf": {
+   "in_domain_auc": 0.9945641803575858,
+   "in_domain_fpr@95": 0.033950617283950615,
+   "in_domain_fpr@99": 0.12808641975308643,
+   "transfer_auc": 0.7210668611111111,
+   "tests": {
+    "gutenberg": {
+     "n": 11066,
+     "fpr@95": 0.0,
+     "fpr@99": 0.0
+    },
+    "hn_pre": {
+     "n": 27739,
+     "fpr@95": 0.002595623490392588,
+     "fpr@99": 0.02307220880348967
+    },
+    "arxiv_pre": {
+     "n": 3080,
+     "fpr@95": 0.046103896103896105,
+     "fpr@99": 0.25422077922077924
+    },
+    "arxiv_post": {
+     "n": 1600,
+     "fpr@95": 0.03625,
+     "fpr@99": 0.2425
+    }
+   },
+   "terms": {
+    "top_ai_terms": [
+     "important",
+     "important to",
+     "including",
+     "it is",
+     "such as",
+     "it important",
+     "is important",
+     "may",
+     "used to",
+     "this can",
+     "or",
+     "and the",
+     "can",
+     "used",
+     "overall",
+     "it",
+     "that",
+     "such",
+     "variety of",
+     "variety",
+     "that are",
+     "to note",
+     "means that",
+     "can be",
+     "help"
+    ],
+    "top_human_terms": [
+     "but",
+     "my",
+     "you",
+     "only",
+     "what",
+     "would",
+     "no",
+     "etc",
+     "all",
+     "since",
+     "hi",
+     "like",
+     "just",
+     "get",
+     "so",
+     "do",
+     "most",
+     "an",
+     "then",
+     "re",
+     "now",
+     "thus",
+     "query",
+     "theory",
+     "from"
+    ]
+   }
+  },
+  "char": {
+   "in_domain_auc": 0.993099681340279,
+   "in_domain_fpr@95": 0.043209876543209874,
+   "in_domain_fpr@99": 0.14660493827160495,
+   "transfer_auc": 0.67147375,
+   "tests": {
+    "gutenberg": {
+     "n": 11066,
+     "fpr@95": 0.0,
+     "fpr@99": 0.0026206397975781673
+    },
+    "hn_pre": {
+     "n": 27739,
+     "fpr@95": 0.011788456685533005,
+     "fpr@99": 0.07339846425610151
+    },
+    "arxiv_pre": {
+     "n": 3080,
+     "fpr@95": 0.08961038961038961,
+     "fpr@99": 0.3743506493506494
+    },
+    "arxiv_post": {
+     "n": 1600,
+     "fpr@95": 0.099375,
+     "fpr@99": 0.40375
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,494 @@
+{
+ "pooled": {
+  "wiki_ai": {
+   "n_docs": 6000,
+   "n_words": 804335,
+   "emdash": {
+    "rate": 2.5176077132040753,
+    "ci": 0.10965580261955528,
+    "count": 2025,
+    "label": "em-dashes / 1K words"
+   },
+   "core": {
+    "rate": 0.11438020227890121,
+    "ci": 0.023372922440756474,
+    "count": 92,
+    "label": "slop lexicon / 1K words"
+   },
+   "triad": {
+    "rate": 1.6572696699758185,
+    "ci": 0.08896807195140388,
+    "count": 1333,
+    "label": "rule-of-three / 1K words"
+   },
+   "notxbut": {
+    "rate": 0.27351787501476377,
+    "ci": 0.11429584550285542,
+    "count": 22,
+    "label": "not-X-but-Y / 10K words"
+   },
+   "notonly": {
+    "rate": 0.062163153412446305,
+    "ci": 0.05448840639658336,
+    "count": 5,
+    "label": "not-only-but-also / 10K words"
+   },
+   "moreover": {
+    "rate": 0.0,
+    "ci": 0.37297892047467784,
+    "count": 0,
+    "label": "moreover / 100K words"
+   },
+   "delve": {
+    "rate": 0.0,
+    "ci": 0.37297892047467784,
+    "count": 0,
+    "label": "delve family / 100K words"
+   }
+  },
+  "hc3_ai": {
+   "n_docs": 3236,
+   "n_words": 627564,
+   "emdash": {
+    "rate": 0.033462722527104805,
+    "ci": 0.014312242834377764,
+    "count": 21,
+    "label": "em-dashes / 1K words"
+   },
+   "core": {
+    "rate": 0.08923392673894616,
+    "ci": 0.023371794679353578,
+    "count": 56,
+    "label": "slop lexicon / 1K words"
+   },
+   "triad": {
+    "rate": 2.316895169257638,
+    "ci": 0.11909135925986108,
+    "count": 1454,
+    "label": "rule-of-three / 1K words"
+   },
+   "notxbut": {
+    "rate": 0.8286007482902142,
+    "ci": 0.22521624885778718,
+    "count": 52,
+    "label": "not-X-but-Y / 10K words"
+   },
+   "notonly": {
+    "rate": 0.15934629774811812,
+    "ci": 0.09876385856948493,
+    "count": 10,
+    "label": "not-only-but-also / 10K words"
+   },
+   "moreover": {
+    "rate": 0.0,
+    "ci": 0.4780388932443544,
+    "count": 0,
+    "label": "moreover / 100K words"
+   },
+   "delve": {
+    "rate": 0.15934629774811812,
+    "ci": 0.3123187435863115,
+    "count": 1,
+    "label": "delve family / 100K words"
+   }
+  },
+  "wiki_human": {
+   "n_docs": 6000,
+   "n_words": 1131782,
+   "emdash": {
+    "rate": 3.1136738347137527,
+    "ci": 0.10280429014112409,
+    "count": 3524,
+    "label": "em-dashes / 1K words"
+   },
+   "core": {
+    "rate": 0.1024932363299646,
+    "ci": 0.01865186585753021,
+    "count": 116,
+    "label": "slop lexicon / 1K words"
+   },
+   "triad": {
+    "rate": 1.059391296203686,
+    "ci": 0.05996569621823697,
+    "count": 1199,
+    "label": "rule-of-three / 1K words"
+   },
+   "notxbut": {
+    "rate": 0.8570555106902212,
+    "ci": 0.1705607731128465,
+    "count": 97,
+    "label": "not-X-but-Y / 10K words"
+   },
+   "notonly": {
+    "rate": 0.21205497171716814,
+    "ci": 0.08483965809413878,
+    "count": 24,
+    "label": "not-only-but-also / 10K words"
+   },
+   "moreover": {
+    "rate": 0.7068499057238938,
+    "ci": 0.4898219943860684,
+    "count": 8,
+    "label": "moreover / 100K words"
+   },
+   "delve": {
+    "rate": 0.08835623821548673,
+    "ci": 0.173178226902354,
+    "count": 1,
+    "label": "delve family / 100K words"
+   }
+  },
+  "hc3_human": {
+   "n_docs": 3236,
+   "n_words": 534582,
+   "emdash": {
+    "rate": 1.064383013270181,
+    "ci": 0.08745766399197154,
+    "count": 569,
+    "label": "em-dashes / 1K words"
+   },
+   "core": {
+    "rate": 0.1084959837779798,
+    "ci": 0.027922592394605993,
+    "count": 58,
+    "label": "slop lexicon / 1K words"
+   },
+   "triad": {
+    "rate": 0.8941565559633508,
+    "ci": 0.08015962709890696,
+    "count": 478,
+    "label": "rule-of-three / 1K words"
+   },
+   "notxbut": {
+    "rate": 1.4403777156731803,
+    "ci": 0.32172669860355496,
+    "count": 77,
+    "label": "not-X-but-Y / 10K words"
+   },
+   "notonly": {
+    "rate": 0.24318065329547198,
+    "ci": 0.13219450897915416,
+    "count": 13,
+    "label": "not-only-but-also / 10K words"
+   },
+   "moreover": {
+    "rate": 1.8706204099651689,
+    "ci": 1.1594225420852224,
+    "count": 10,
+    "label": "moreover / 100K words"
+   },
+   "delve": {
+    "rate": 0.0,
+    "ci": 0.5611861229895507,
+    "count": 0,
+    "label": "delve family / 100K words"
+   }
+  },
+  "gutenberg": {
+   "n_docs": 11066,
+   "n_words": 6758703,
+   "emdash": {
+    "rate": 5.724175185682816,
+    "ci": 0.0570401748907451,
+    "count": 38688,
+    "label": "em-dashes / 1K words"
+   },
+   "core": {
+    "rate": 0.07116750062844898,
+    "ci": 0.006360119080679261,
+    "count": 481,
+    "label": "slop lexicon / 1K words"
+   },
+   "triad": {
+    "rate": 0.6835631037493436,
+    "ci": 0.019711228688234533,
+    "count": 4620,
+    "label": "rule-of-three / 1K words"
+   },
+   "notxbut": {
+    "rate": 3.4947533572639604,
+    "ci": 0.1409394769690979,
+    "count": 2362,
+    "label": "not-X-but-Y / 10K words"
+   },
+   "notonly": {
+    "rate": 0.059182952705570877,
+    "ci": 0.018340987061955596,
+    "count": 40,
+    "label": "not-only-but-also / 10K words"
+   },
+   "moreover": {
+    "rate": 4.098419474860783,
+    "ci": 0.48265031434437566,
+    "count": 277,
+    "label": "moreover / 100K words"
+   },
+   "delve": {
+    "rate": 0.17754885811671264,
+    "ci": 0.10045772340743482,
+    "count": 12,
+    "label": "delve family / 100K words"
+   }
+  },
+  "hn_pre": {
+   "n_docs": 27739,
+   "n_words": 2527285,
+   "emdash": {
+    "rate": 0.8483412040984694,
+    "ci": 0.03590990383667666,
+    "count": 2144,
+    "label": "em-dashes / 1K words"
+   },
+   "core": {
+    "rate": 0.14679784828383027,
+    "ci": 0.01493787450055934,
+    "count": 371,
+    "label": "slop lexicon / 1K words"
+   },
+   "triad": {
+    "rate": 0.35690474164963587,
+    "ci": 0.02329191091519569,
+    "count": 902,
+    "label": "rule-of-three / 1K words"
+   },
+   "notxbut": {
+    "rate": 3.7866722589656487,
+    "ci": 0.2399152312824689,
+    "count": 957,
+    "label": "not-X-but-Y / 10K words"
+   },
+   "notonly": {
+    "rate": 0.17409987397543214,
+    "ci": 0.0514432253512887,
+    "count": 44,
+    "label": "not-only-but-also / 10K words"
+   },
+   "moreover": {
+    "rate": 1.2661809016395065,
+    "ci": 0.438709299861514,
+    "count": 32,
+    "label": "moreover / 100K words"
+   },
+   "delve": {
+    "rate": 0.3165452254098766,
+    "ci": 0.219354649930757,
+    "count": 8,
+    "label": "delve family / 100K words"
+   }
+  },
+  "arxiv_pre": {
+   "n_docs": 3080,
+   "n_words": 429989,
+   "emdash": {
+    "rate": 0.2581461386221508,
+    "ci": 0.04802420842298609,
+    "count": 111,
+    "label": "em-dashes / 1K words"
+   },
+   "core": {
+    "rate": 0.5697820176795221,
+    "ci": 0.07134799413775031,
+    "count": 245,
+    "label": "slop lexicon / 1K words"
+   },
+   "triad": {
+    "rate": 0.6465281669996209,
+    "ci": 0.07600131798963417,
+    "count": 278,
+    "label": "rule-of-three / 1K words"
+   },
+   "notxbut": {
+    "rate": 1.7209742574810052,
+    "ci": 0.3921160197912864,
+    "count": 74,
+    "label": "not-X-but-Y / 10K words"
+   },
+   "notonly": {
+    "rate": 1.7907434841356407,
+    "ci": 0.3999853530971388,
+    "count": 77,
+    "label": "not-only-but-also / 10K words"
+   },
+   "moreover": {
+    "rate": 23.488972973727236,
+    "ci": 4.580990727064401,
+    "count": 101,
+    "label": "moreover / 100K words"
+   },
+   "delve": {
+    "rate": 0.23256408884878452,
+    "ci": 0.4558256141436176,
+    "count": 1,
+    "label": "delve family / 100K words"
+   }
+  },
+  "arxiv_post": {
+   "n_docs": 1600,
+   "n_words": 276696,
+   "emdash": {
+    "rate": 0.581866019024489,
+    "ci": 0.08988063426750319,
+    "count": 161,
+    "label": "em-dashes / 1K words"
+   },
+   "core": {
+    "rate": 1.8431780726862694,
+    "ci": 0.15996990191146226,
+    "count": 510,
+    "label": "slop lexicon / 1K words"
+   },
+   "triad": {
+    "rate": 1.9768988348223322,
+    "ci": 0.16567113730962457,
+    "count": 547,
+    "label": "rule-of-three / 1K words"
+   },
+   "notxbut": {
+    "rate": 2.204585537918871,
+    "ci": 0.5532457774878221,
+    "count": 61,
+    "label": "not-X-but-Y / 10K words"
+   },
+   "notonly": {
+    "rate": 1.9877410587793103,
+    "ci": 0.5253328213890877,
+    "count": 55,
+    "label": "not-only-but-also / 10K words"
+   },
+   "moreover": {
+    "rate": 31.44244947523636,
+    "ci": 6.607129464847371,
+    "count": 87,
+    "label": "moreover / 100K words"
+   },
+   "delve": {
+    "rate": 4.336889582791222,
+    "ci": 2.4538262807087916,
+    "count": 12,
+    "label": "delve family / 100K words"
+   }
+  }
+ },
+ "per_doc": {
+  "wiki_ai": {
+   "mean_sent_len": {
+    "mean": 16.125641691418174,
+    "n": 6000
+   },
+   "ttr": {
+    "mean": 0.5821852578633154
+   },
+   "mean_word_len": {
+    "mean": 4.876439646668802
+   },
+   "std_sent_len": {
+    "mean": 5.9512267051331245
+   }
+  },
+  "hc3_ai": {
+   "mean_sent_len": {
+    "mean": 22.96812977081766,
+    "n": 3236
+   },
+   "ttr": {
+    "mean": 0.514984065408516
+   },
+   "mean_word_len": {
+    "mean": 4.894364996936584
+   },
+   "std_sent_len": {
+    "mean": 7.144096323284561
+   }
+  },
+  "wiki_human": {
+   "mean_sent_len": {
+    "mean": 20.530353812268523,
+    "n": 6000
+   },
+   "ttr": {
+    "mean": 0.5898940664884733
+   },
+   "mean_word_len": {
+    "mean": 4.99924878105402
+   },
+   "std_sent_len": {
+    "mean": 9.95873894517852
+   }
+  },
+  "hc3_human": {
+   "mean_sent_len": {
+    "mean": 18.494463482995084,
+    "n": 3236
+   },
+   "ttr": {
+    "mean": 0.6513655089306372
+   },
+   "mean_word_len": {
+    "mean": 4.806389363406902
+   },
+   "std_sent_len": {
+    "mean": 9.023491510460913
+   }
+  },
+  "gutenberg": {
+   "mean_sent_len": {
+    "mean": 20.2723873227472,
+    "n": 11066
+   },
+   "ttr": {
+    "mean": 0.48099812656953905
+   },
+   "mean_word_len": {
+    "mean": 4.258360635922271
+   },
+   "std_sent_len": {
+    "mean": 14.020514291488341
+   }
+  },
+  "hn_pre": {
+   "mean_sent_len": {
+    "mean": 17.025089366821202,
+    "n": 6000
+   },
+   "ttr": {
+    "mean": 0.7715299418892166
+   },
+   "mean_word_len": {
+    "mean": 4.618720517777959
+   },
+   "std_sent_len": {
+    "mean": 8.14145585260756
+   }
+  },
+  "arxiv_pre": {
+   "mean_sent_len": {
+    "mean": 21.374263633994154,
+    "n": 3080
+   },
+   "ttr": {
+    "mean": 0.6594092837648532
+   },
+   "mean_word_len": {
+    "mean": 5.662062529654861
+   },
+   "std_sent_len": {
+    "mean": 7.86245395270211
+   }
+  },
+  "arxiv_post": {
+   "mean_sent_len": {
+    "mean": 20.702415187726498,
+    "n": 1600
+   },
+   "ttr": {
+    "mean": 0.6786475256047134
+   },
+   "mean_word_len": {
+    "mean": 6.119804540514363
+   },
+   "std_sent_len": {
+    "mean": 8.323647650204656
+   }
+  }
+ }
+}

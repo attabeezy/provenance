@@ -1,0 +1,27 @@
+# Derived / heavy artifacts: everything here is recomputable via `prov` CLI
+analysis/feat_*.jsonl
+
+# Raw corpora (re-downloadable: see README "Data pipeline")
+data/raw/*.jsonl
+data/raw/*.zip
+data/raw/*.part
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# LaTeX build intermediates (keep paper.pdf + paper.tex)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.bbl
+paper/*.blg
+
+# OS / editor
+Thumbs.db
+.DS_Store
