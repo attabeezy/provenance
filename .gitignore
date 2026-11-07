@@ -14,13 +14,8 @@ build/
 dist/
 .pytest_cache/
 
-# LaTeX build intermediates (keep paper.pdf + paper.tex)
-paper/*.aux
-paper/*.log
-paper/*.out
-paper/*.synctex.gz
-paper/*.bbl
-paper/*.blg
+# Paper folder stays local (draft, tex/pdf builds, self-review)
+paper/
 
 # OS / editor
 Thumbs.db
