@@ -21,7 +21,8 @@ src/provenance/          the code
   extract.py             derived corpora: wiki pairs, HC3 pairs, per-document feature caches
   cli.py                 the prov entry point (collect / download / extract / run)
   experiments/           E1 time series, E2 marker overlap, E3 detector grid, E4 arithmetic,
-                         meta-audit (the paper scores itself), shared detector utils
+                         E5 vintage test, meta-audit (the paper scores itself),
+                         shared detector utils
 tests/                   pytest: feature correctness on synthetic text, detector smoke
 analysis/                committed result JSONs (e1_timeseries, e1_summary, e2_overlap,
                          e3_detector, e4_math, meta_audit)
@@ -38,7 +39,7 @@ Requires Python >= 3.12.
 
 ```powershell
 pip install -e ".[test]"
-python -m pytest          # 14 tests, no data required
+python -m pytest          # 16 tests, no data required
 ```
 
 ## Data pipeline
@@ -54,6 +55,8 @@ All raw corpora are gitignored and re-downloadable/derivable:
 | HC3 all.jsonl | `prov download hc3` (HF: `Hello-SimpleAI/HC3`, file `all.jsonl` — casing matters) |
 | derived pairs | `prov extract wiki`, `prov extract hc3` |
 | feature caches | `prov extract feats` (writes `analysis/feat_*.jsonl`) |
+| vintage corpora (GPT-2 xl samples + human WebText, 2019/2020 release) | `prov collect gpt2` (OpenAI v1 archive; 2 files, ~28 MB) |
+| their feature caches | `prov extract gpt2` (writes `feat_gpt2_ai`, `feat_webtext_human`) |
 
 Signing in to Hugging Face is not required: both datasets are ungated.
 
@@ -66,6 +69,8 @@ prov run e1report  # printable E1 table
 prov run e2        # marker overlap across 8 corpora + Figure 2
 prov run e3        # classifier grid (folk / tfidf / char x W/H pairs); ~20 min
 prov run e4        # posterior + scale arithmetic + Figure 4 (needs e3)
+prov run e5        # vintage test: 2023-era detectors on 2019-era corpora
+                   # (needs prov collect gpt2 + prov extract gpt2 first)
 prov run meta      # meta-audit: the paper scores its own draft (needs the local
                    # paper/draft.md, kept outside the repo)
 ```

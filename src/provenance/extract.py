@@ -4,6 +4,7 @@ Subcommands:
   wiki    matched human/AI Wikipedia-intro pairs from GPT-wiki-intro zip
   hc3     matched human/ChatGPT Q&A pairs from HC3 (+ their feat caches)
   feats   feature caches for gutenberg / wiki / hn_pre / arxiv_{pre,post}
+  gpt2    feature caches for the vintage-2019 corpus pair (E5)
 """
 import csv
 import io
@@ -143,3 +144,19 @@ def feat_cache():
     post = [r for r in corpora.read_jsonl(paths.ARXIV_ABSTRACTS)
             if 2023 <= r["year"] <= 2026]
     _emit("arxiv_post", [(f"{r['year']}", r["text"]) for r in post])
+
+
+# ---------------------------------------------------------------------------
+# vintage-2019 corpus pair (E5)
+# ---------------------------------------------------------------------------
+def gpt2_caches():
+    """Feature caches for the vintage corpora from the GPT-2 archive.
+
+    Outputs analysis/feat_gpt2_ai.jsonl and analysis/feat_webtext_human.jsonl,
+    one feature row per filtered archive doc, meta = '<name>-<index>'.
+    """
+    _emit("gpt2_ai", [(f"gpt2-{i}", r["text"])
+                      for i, r in enumerate(corpora.read_jsonl(paths.GPT2_AI))])
+    _emit("webtext_human", [(f"web-{i}", r["text"])
+                            for i, r in enumerate(
+                                corpora.read_jsonl(paths.WEBTEXT_HUMAN))])

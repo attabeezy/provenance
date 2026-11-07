@@ -23,6 +23,10 @@ WIKI_PAIRS = DATA_RAW / "wiki_pairs.jsonl"
 HC3_PAIRS = DATA_RAW / "hc3_pairs.jsonl"
 HC3_ALL = DATA_RAW / "hc3_all.jsonl"
 GPT_WIKI_INTRO_ZIP = DATA_RAW / "gpt_wiki_intro.zip"
+GPT2_ARX = DATA_RAW / "xl-1542M.test.jsonl"
+WEBTEXT_ARX = DATA_RAW / "webtext.test.jsonl"
+GPT2_AI = DATA_RAW / "gpt2_ai.jsonl"
+WEBTEXT_HUMAN = DATA_RAW / "webtext_human.jsonl"
 
 # derived feature caches
 def feat_path(name: str) -> Path:
@@ -35,6 +39,7 @@ E2_OVERLAP = ANALYSIS / "e2_overlap.json"
 E3_DETECTOR = ANALYSIS / "e3_detector.json"
 E4_MATH = ANALYSIS / "e4_math.json"
 META_AUDIT = ANALYSIS / "meta_audit.json"
+E5_VINTAGE = ANALYSIS / "e5_vintage.json"
 
 # paper artifacts
 DRAFT = PAPER / "draft.md"

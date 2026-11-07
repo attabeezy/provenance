@@ -1,9 +1,10 @@
-"""Collectors for the three primary raw corpora (networked, resumable).
+"""Collectors for the primary raw corpora (networked, resumable).
 
 Subcommands:
   hn        Hacker News comments via Algolia API (2015-2026)
   arxiv     arXiv cs.CL abstracts via export API (2010-2026, CLI year filter)
   gutenberg Project Gutenberg classic literature segments
+  gpt2      vintage-2019 corpora from OpenAI's gpt-2-output-dataset v1 archive
 """
 import calendar
 import csv
@@ -17,7 +18,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 import zipfile
 
-from . import paths
+from . import corpora, paths
 
 HFA_UA = "stylometry-research/0.1"
 
@@ -301,3 +302,59 @@ HF_ASSETS = {
     "gpt_wiki_intro.zip": "https://huggingface.co/datasets/aadityaubhat/GPT-wiki-intro/resolve/main/GPT-wiki-intro.csv.zip",
     "hc3_all.jsonl": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/all.jsonl",
 }
+
+
+# ---------------------------------------------------------------------------
+# Vintage corpora: OpenAI gpt-2-output-dataset v1 (frozen 2020-12-02)
+# ---------------------------------------------------------------------------
+GPT2_BASE = ("https://openaipublic.blob.core.windows.net/"
+             "gpt-2/output-dataset/v1")
+GPT2_ARCHIVE_FILES = {
+    "gpt2_ai": "xl-1542M.test.jsonl",
+    "webtext_human": "webtext.test.jsonl",
+}
+GPT2_MIN_WORDS = 60
+GPT2_CAP = 6000
+
+
+def gpt2_filter_rows(docs, min_words=GPT2_MIN_WORDS, cap=GPT2_CAP):
+    """Keep archive rows with enough words and a natural sentence end.
+
+    Rows carry {'text', 'ended'}; a GPT-2 sample with ended=False was cut
+    mid-sentence at the generation limit and is skipped. WebText rows have
+    no flag and pass anyway. Returns [{'text': ..., 'ended': ...}, ...].
+    """
+    kept = []
+    for d in docs:
+        if len(kept) >= cap:
+            break
+        if d.get("ended") is False:
+            continue
+        text = re.sub(r"\s+", " ", (d.get("text") or "")).strip()
+        if len(text.split()) < min_words:
+            continue
+        kept.append({"text": text, "ended": bool(d.get("ended", True))})
+    return kept
+
+
+def collect_gpt2():
+    """Download the two vintage-2019 test-split files into data/raw.
+
+    Each file (5K docs) is kept under its archive name
+    (data/raw/xl-1542M.test.jsonl, data/raw/webtext.test.jsonl) plus a
+    filtered copy per side:
+      data/raw/gpt2_ai.jsonl       natural xl-1542M GPT-2 samples
+      data/raw/webtext_human.jsonl matched human WebText documents
+    Filter: >= 60 words, no cut-mid-sentence rows, cap 6000 docs.
+    """
+    out_paths = {"gpt2_ai": paths.GPT2_AI, "webtext_human": paths.WEBTEXT_HUMAN}
+    for name, fname in GPT2_ARCHIVE_FILES.items():
+        dest = download_hf(fname, f"{GPT2_BASE}/{fname}")
+        docs = []
+        with open(dest, encoding="utf-8", errors="replace") as f:
+            for line in f:
+                if line.strip():
+                    docs.append(json.loads(line))
+        kept = gpt2_filter_rows(docs)
+        corpora.write_jsonl(out_paths[name], kept)
+        print(f"{name}: {len(kept)} docs -> {out_paths[name]}")

@@ -22,10 +22,10 @@ def feat_rows(name: str) -> list[dict]:
 
 
 def raw_texts(name: str) -> list[str]:
-    """Raw text lists for the eight comparison corpora.
+    """Raw text lists for the comparison corpora.
 
     Names: wiki_ai | wiki_human | hc3_ai | hc3_human | gutenberg |
-    hn_pre | arxiv_pre | arxiv_post
+    hn_pre | arxiv_pre | arxiv_post | gpt2_ai | webtext_human
     """
     if name in ("wiki_ai", "wiki_human"):
         key = "ai" if name == "wiki_ai" else "human"
@@ -42,4 +42,7 @@ def raw_texts(name: str) -> list[str]:
         lo, hi = (2010, 2019) if name == "arxiv_pre" else (2023, 2026)
         return [r["text"] for r in read_jsonl(paths.ARXIV_ABSTRACTS)
                 if lo <= r["year"] <= hi]
+    if name in ("gpt2_ai", "webtext_human"):
+        src = paths.GPT2_AI if name == "gpt2_ai" else paths.WEBTEXT_HUMAN
+        return [r["text"] for r in read_jsonl(src)]
     raise KeyError(name)
