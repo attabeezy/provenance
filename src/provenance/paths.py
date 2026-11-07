@@ -43,6 +43,7 @@ E5_VINTAGE = ANALYSIS / "e5_vintage.json"
 
 # paper artifacts
 DRAFT = PAPER / "draft.md"
+PAPER_TEX = PAPER / "paper.tex"
 
 def figure_path(name: str) -> Path:
     return FIGURES / name
